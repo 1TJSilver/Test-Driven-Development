@@ -5,7 +5,7 @@ public class TestCalculator {
     @Test
     public void monthlyPaymentTest(){
         //Arrange
-        Calculator calculator =new Calculator();
+        Calculator calculator = new Calculator(200_000, 12, 12);
         double excepted = 18_666;
         //Act
         int result = calculator.monthlyPayment();
@@ -16,7 +16,7 @@ public class TestCalculator {
     @Test
     public void totalAmount(){
         //Arrange
-        Calculator calculator = new Calculator();
+        Calculator calculator = new Calculator(200_000, 12, 12);
         double excepted = 224_000;
         //Act
         int result = calculator.totalAmount();
@@ -27,7 +27,7 @@ public class TestCalculator {
     @Test
     public void overPayment(){
         //Arrange
-        Calculator calculator = new Calculator();
+        Calculator calculator = new Calculator(200_000, 12, 12);
         double excepted = 24_000;
         //Act
         double result = calculator.overpayment();
